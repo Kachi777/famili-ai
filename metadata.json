@@ -1,0 +1,6 @@
+{
+  "name": "FAMILI AI",
+  "description": "The custom AI-powered personal growth companion and StudyPilot tutor on the TON blockchain.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

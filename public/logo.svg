@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+    <linearGradient id="diskGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#334155" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="diskGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#475569" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background rounded box -->
+  <rect x="10" y="10" width="180" height="180" rx="36" fill="url(#bgGrad)" opacity="0.15" />
+  
+  <!-- Back Floppy Disk (Bottom Left offset) -->
+  <g transform="translate(25, 60)">
+    <!-- Main Disk Body -->
+    <path d="M 0 12 C 0 5.373 5.373 0 12 0 L 80 0 L 100 20 L 100 88 C 100 94.627 94.627 100 88 100 L 12 100 C 5.373 100 0 94.627 0 88 Z" fill="url(#diskGrad1)" stroke="#475569" stroke-width="3" />
+    <!-- Metal Shutter / Top Notch -->
+    <rect x="22" y="0" width="56" height="38" rx="4" fill="#64748b" />
+    <rect x="58" y="8" width="12" height="22" rx="2" fill="#0f172a" />
+    <!-- Label Area -->
+    <rect x="15" y="48" width="70" height="42" rx="6" fill="#cbd5e1" />
+    <line x1="25" y1="62" x2="75" y2="62" stroke="#64748b" stroke-width="3" stroke-linecap="round" />
+    <line x1="25" y1="74" x2="65" y2="74" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" />
+  </g>
+
+  <!-- Front Floppy Disk (Top Right offset) -->
+  <g transform="translate(65, 25)" filter="url(#glow)">
+    <!-- Main Disk Body -->
+    <path d="M 0 12 C 0 5.373 5.373 0 12 0 L 88 0 L 110 22 L 110 98 C 110 104.627 104.627 110 98 110 L 12 110 C 5.373 110 0 104.627 0 98 Z" fill="url(#diskGrad2)" stroke="#22d3ee" stroke-width="4" />
+    <!-- Metal Shutter / Top Notch -->
+    <rect x="24" y="0" width="62" height="42" rx="4" fill="#94a3b8" />
+    <rect x="64" y="8" width="14" height="24" rx="2" fill="#0284c7" />
+    <!-- Write Protect Window -->
+    <rect x="10" y="8" width="8" height="12" rx="2" fill="#334155" />
+    <!-- Label Area -->
+    <rect x="16" y="52" width="78" height="48" rx="6" fill="#f8fafc" />
+    <line x1="26" y1="68" x2="84" y2="68" stroke="#0284c7" stroke-width="4" stroke-linecap="round" />
+    <line x1="26" y1="82" x2="72" y2="82" stroke="#06b6d4" stroke-width="3" stroke-linecap="round" />
+  </g>
+</svg>
